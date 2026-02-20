@@ -49,15 +49,6 @@ Exposed: `Email addresses` · `Names` · `Physical addresses`
 <!-- SECURITY-END -->
 ---
 
-**💥 Latest Breach Added to HIBP**
-**CarMax** `carmax.com` · 431,371 accounts exposed · Added 2026-02-20
-In January 2026, data allegedly sourced from US automotive retailer CarMax was published online following a failed extortion attempt. The data included 431k unique email addresses along with names,...
-Exposed data: `Email addresses` · `Names` · `Phone numbers` · `Physical addresses`
-<!-- SECURITY-END -->
-
-
----
-
 ## 📰 Reading List
 
 Things I've read and kept thinking about. Updated when something actually sticks.
