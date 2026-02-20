@@ -35,11 +35,12 @@ The most complete map of the LLM attack landscape I've come across. Good place t
 ## 🛰️ Threat Intelligence Pulse
 <p align="center"><i>Active Monitoring • 2026-02-20 12:45 UTC</i></p>
 
-| Vulnerability | Technical Analysis | Breach Impact |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vulnerability &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Analysis | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Breach Impact &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | :---: | :---: | :---: |
-| [`CVE-1999-0095`](https://nvd.nist.gov/vuln/detail/CVE-1999-0095) <br> **10.0** &nbsp; 🔴 `CRIT` | The debug command in Sendmail is enabled, allowing attackers to execute commands as root via the shell. | [**CarMax**](https://www.google.com/search?q=CarMax+data+breach+news&tbm=nws) <br> 431,371 accounts <br> `email` `names` |
-| [`CVE-1999-0082`](https://nvd.nist.gov/vuln/detail/CVE-1999-0082) <br> **10.0** &nbsp; 🔴 `CRIT` | CWD ~root command in ftpd allows direct root access to the underlying operating system by unauthorized users. | [**Figure**](https://www.google.com/search?q=Figure+data+breach+news&tbm=nws) <br> 967,178 accounts <br> `email` `names` |
-| [`CVE-1999-1471`](https://nvd.nist.gov/vuln/detail/CVE-1999-1471) <br> **7.2** &nbsp; 🟡 `MED` | Buffer overflow in passwd allows local users to gain root privileges by specifying a long shell or GECOS field. | [**Canada Goose**](https://www.google.com/search?q=Canada+Goose+data+breach+news&tbm=nws) <br> 581,877 accounts <br> `ip` `email` |
+| [`CVE-1999-0095`](https://nvd.nist.gov/vuln/detail/CVE-1999-0095) <br> **10.0** &nbsp; 🔴 `CRIT` | Sendmail debug enabled, allowing root command execution. | [**CarMax**](https://www.google.com/search?q=CarMax+data+breach+news&tbm=nws) <br> 431,371 accounts <br> `email` `names` |
+| [`CVE-1999-0082`](https://nvd.nist.gov/vuln/detail/CVE-1999-0082) <br> **10.0** &nbsp; 🔴 `CRIT` | ftpd CWD ~root command allows direct root access. | [**Figure**](https://www.google.com/search?q=Figure+data+breach+news&tbm=nws) <br> 967,178 accounts <br> `email` `names` |
+| [`CVE-1999-1471`](https://nvd.nist.gov/vuln/detail/CVE-1999-1471) <br> **7.2** &nbsp; 🟡 `MED` | Buffer overflow in passwd allows root privilege escalation. | [**Canada Goose**](https://www.google.com/search?q=Canada+Goose+data+breach+news&tbm=nws) <br> 581,877 accounts <br> `ip` `email` |
+
 
 <!-- SECURITY-END -->
 ---
