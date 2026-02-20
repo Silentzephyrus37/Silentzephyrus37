@@ -44,6 +44,4 @@ In January 2026, data allegedly sourced from US automotive retailer CarMax was p
 Exposed data: `Email addresses` · `Names` · `Phone numbers` · `Physical addresses`
 <!-- SECURITY-END -->
 
----
 
-📬 [LinkedIn](https://www.linkedin.com/in/samuelabhinav/) &nbsp; [X / Twitter](https://twitter.com/Samuelabhinav37) &nbsp; samuelabhinav37@gmail.com
