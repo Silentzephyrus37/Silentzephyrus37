@@ -73,31 +73,35 @@ def severity_style(severity):
 
 def update_readme():
     now = datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')
-    cves = get_latest_cves(5)
-    breaches = get_latest_breaches(5)
+    
+    # Increased count to 6 as requested
+    cves = get_latest_cves(6)
+    breaches = get_latest_breaches(6)
 
     table_rows = []
-    for (cve_id, desc, score, sev), (b_name, b_count, b_data) in zip(cves, breaches):
-        # Column 1: Occupying more space
-        # We use a non-breaking space (&nbsp;) to prevent the header from collapsing
+    for (cve_id, desc, score, sev), (b_name, b_domain, b_count, b_date, b_data) in zip(cves, breaches):
+        
+        # COLUMN 1: Optimized Threat Analysis
         status = severity_style(sev)
-        cve_header = f"[`{cve_id}`](https://nvd.nist.gov/vuln/detail/{cve_id}) &nbsp; **{score}** {status}"
+        # Compact header: ID | SCORE | STATUS
+        cve_header = f"[`{cve_id}`](https://nvd.nist.gov/vuln/detail/{cve_id}) &nbsp; **{score}** &nbsp; {status}"
+        short_desc = (desc[:90] + '...') if len(desc) > 90 else desc
+        cve_col = f"{cve_header} <br> {short_desc}"
         
-        # We don't truncate much here, so it uses the full horizontal width
-        cve_col = f"{cve_header} <br> {desc}"
-        
-        # Column 2: Occupying more space
+        # COLUMN 2: Optimized & Clickable Recent Breaches
+        # Navigates to the domain when clicked
+        breach_link = f"[**{b_name}**](https://{b_domain})" if b_domain != 'N/A' else f"**{b_name}**"
         data_str = " ".join(f"`{d.lower()}`" for d in b_data)
-        breach_col = f"**{b_name}** • {int(b_count):,} accounts <br> {data_str}"
+        breach_col = f"{breach_link} • {int(b_count):,} <br> {data_str}"
         
         table_rows.append(f"| {cve_col} | {breach_col} |")
 
-    # Center alignment for professional 'Dashboard' look
+    # Double-centered alignment
     table_header = "| Threat Analysis | Recent Breaches |\n| :---: | :---: |"
     table_body = "\n".join(table_rows)
 
     section = f"""## 🛰️ Threat Intelligence
-<p align="center"><i>Sync frequency: Daily • {now}</i></p>
+<p align="center"><i>Refresh: Daily • {now}</i></p>
 
 {table_header}
 {table_body}
