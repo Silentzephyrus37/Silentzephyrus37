@@ -78,20 +78,27 @@ def update_readme():
 
     table_rows = []
     for (cve_id, desc, score, sev), (b_name, b_count, b_data) in zip(cves, breaches):
-        # Column 1: Analysis
-        cve_col = f"[`{cve_id}`](https://nvd.nist.gov/vuln/detail/{cve_id}) <br> {severity_style(sev)} **{score}** <br> {desc}"
+        # COLUMN 1: Slim Threat Analysis
+        # We put status and score on one line to reduce "bulk"
+        status = severity_style(sev)
+        cve_header = f"[`{cve_id}`](https://nvd.nist.gov/vuln/detail/{cve_id}) | **{score}** {status}"
         
-        # Column 2: Breaches
+        # Keep description short (approx 100 chars) to prevent vertical stretching
+        short_desc = (desc[:110] + '...') if len(desc) > 110 else desc
+        cve_col = f"{cve_header} <br> {short_desc}"
+        
+        # COLUMN 2: Slim Recent Breaches
         data_str = " ".join(f"`{d.lower()}`" for d in b_data)
-        breach_col = f"**{b_name}** <br> {int(b_count):,} accounts <br> {data_str}"
+        breach_col = f"**{b_name}** • {int(b_count):,} <br> {data_str}"
         
         table_rows.append(f"| {cve_col} | {breach_col} |")
 
-    table_header = "| Threat Analysis | Recent Breaches |\n| :--- | :--- |"
+    # The ":---:" centers the text in both columns
+    table_header = "| Threat Analysis | Recent Breaches |\n| :---: | :---: |"
     table_body = "\n".join(table_rows)
 
     section = f"""## 🛰️ Threat Intelligence
-<p align="left"><i>Sync frequency: Daily • {now}</i></p>
+<p align="center"><i>Sync frequency: Daily • {now}</i></p>
 
 {table_header}
 {table_body}
