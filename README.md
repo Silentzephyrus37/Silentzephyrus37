@@ -1,4 +1,4 @@
-👋 Hi, I'm Samuel, a cybersecurity graduate student at Iowa State wrapping up my MS. I care a lot about making security tools that people actually want to use, not just ones that technically work. Lately most of my time goes into AI/LLM security: figuring out how language models get abused, what agentic workflows get wrong, and what good defenses actually look like in practice.
+Hi, I'm Samuel, a cybersecurity graduate student at Iowa State wrapping up my MS. I care a lot about making security tools that people actually want to use, not just ones that technically work. Lately most of my time goes into AI/LLM security: figuring out how language models get abused, what agentic workflows get wrong, and what good defenses actually look like in practice.
 
 I've worked across threat detection, adaptive authentication, and security monitoring. The question I keep coming back to is pretty simple: why does security so often feel like it's fighting the user instead of protecting them?
 
