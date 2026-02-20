@@ -2,8 +2,8 @@ name: Update Space Shooter Game
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Daily at midnight UTC
-  workflow_dispatch:      # Allow manual trigger
+    - cron: '0 0 * * *'   # Daily at midnight UTC
+  workflow_dispatch:       # Allow manual trigger
 
 permissions:
   contents: write
@@ -19,3 +19,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           output-path: 'game.gif'
           strategy: 'random'
+          fps: 15
