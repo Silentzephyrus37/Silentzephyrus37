@@ -33,14 +33,13 @@ The most complete map of the LLM attack landscape I've come across. Good place t
 
 <!-- SECURITY-START -->
 ## 🛰️ Threat Intelligence Pulse
-<p align="center"><i>Active Monitoring • 2026-02-20 12:45 UTC</i></p>
+<p align="center"><i>Active Monitoring • 2026-02-20 13:10 UTC</i></p>
 
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vulnerability &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Analysis | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Breach News &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vulnerability &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Analysis | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Breach News &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | :---: | :---: | :---: |
-| [`CVE-1999-0095`](https://nvd.nist.gov/vuln/detail/CVE-1999-0095) <br> **10.0** &nbsp; 🔴 `CRIT` | Sendmail debug enabled, allowing root command execution. | [**CarMax**](https://www.google.com/search?q=CarMax+data+breach+news+2026&tbm=nws) ↗️ <br> 431,371 accounts <br> `email` `names` |
-| [`CVE-1999-0082`](https://nvd.nist.gov/vuln/detail/CVE-1999-0082) <br> **10.0** &nbsp; 🔴 `CRIT` | ftpd CWD ~root command allows direct root access. | [**Figure**](https://www.google.com/search?q=Figure+data+breach+news+2026&tbm=nws) ↗️ <br> 967,178 accounts <br> `email` `names` |
-| [`CVE-1999-1471`](https://nvd.nist.gov/vuln/detail/CVE-1999-1471) <br> **7.2** &nbsp; 🟡 `MED` | Buffer overflow in passwd allows root privilege escalation. | [**Canada Goose**](https://www.google.com/search?q=Canada+Goose+data+breach+news+2026&tbm=nws) ↗️ <br> 581,877 accounts <br> `ip` `email` |
-
+| [`CVE-1999-0095`](https://nvd.nist.gov/vuln/detail/CVE-1999-0095) <br> **10.0** &nbsp; 🔴 `CRIT` | <sub>Sendmail debug enabled, allowing root command execution via shell.</sub> | [**CarMax**](https://www.google.com/search?q=CarMax+data+breach+news+2026&tbm=nws) ↗️ <br> 431,371 accounts <br> `email` `names` |
+| [`CVE-1999-0082`](https://nvd.nist.gov/vuln/detail/CVE-1999-0082) <br> **10.0** &nbsp; 🔴 `CRIT` | <sub>ftpd CWD ~root command allows direct unauthorized root access.</sub> | [**Figure**](https://www.google.com/search?q=Figure+data+breach+news+2026&tbm=nws) ↗️ <br> 967,178 accounts <br> `email` `names` |
+| [`CVE-1999-1471`](https://nvd.nist.gov/vuln/detail/CVE-1999-1471) <br> **7.2** &nbsp; 🟡 `MED` | <sub>Buffer overflow in passwd allows root privilege escalation.</sub> | [**Canada Goose**](https://www.google.com/search?q=Canada+Goose+data+breach+news+2026&tbm=nws) ↗️ <br> 581,877 accounts <br> `ip` `email` |
 
 
 <!-- SECURITY-END -->
