@@ -33,12 +33,12 @@ The most complete map of the LLM attack landscape I've come across. Good place t
 
 <!-- SECURITY-START -->
 ## 🛰️ Threat Intelligence
-<p align="left"><i>Sync frequency: Daily • 2026-02-20 08:50 UTC</i></p>
+<p align="center"><i>Sync frequency: Daily • 2026-02-20 08:50 UTC</i></p>
 
 | Threat Analysis | Recent Breaches |
-| :--- | :--- |
-| [`CVE-1999-0095`](https://nvd.nist.gov/vuln/detail/CVE-1999-0095) <br> `CRIT` ![#f85149](https://via.placeholder.com/10/f85149?text=+) **10.0** <br> The debug command in Sendmail is enabled, allowing attackers to execute commands as root. | **CarMax** <br> 431,371 accounts <br> `email addresses` `names` `phone numbers` |
-| [`CVE-1999-0082`](https://nvd.nist.gov/vuln/detail/CVE-1999-0082) <br> `CRIT` ![#f85149](https://via.placeholder.com/10/f85149?text=+) **10.0** <br> CWD ~root command in ftpd allows root access. | **Figure** <br> 967,178 accounts <br> `dates of birth` `email addresses` `names` |
+| :---: | :---: |
+| [`CVE-1999-0095`](https://nvd.nist.gov/vuln/detail/CVE-1999-0095) \| **10.0** `CRIT` ![#f85149](https://via.placeholder.com/10/f85149?text=+) <br> The debug command in Sendmail is enabled, allowing root command execution. | **CarMax** • 431,371 <br> `email` `names` `phone` |
+| [`CVE-1999-0082`](https://nvd.nist.gov/vuln/detail/CVE-1999-0082) \| **10.0** `CRIT` ![#f85149](https://via.placeholder.com/10/f85149?text=+) <br> CWD ~root command in ftpd allows direct root access to the system. | **Figure** • 967,178 <br> `dob` `email` `names` |
 <!-- SECURITY-END -->
 ---
 
