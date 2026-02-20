@@ -4,6 +4,30 @@ I've worked across threat detection, adaptive authentication, and security monit
 
 ![GitHub Space Shooter](game.gif)
 
+
+---
+
+<!-- SECURITY-START -->
+## 🛰 Threat Intelligence Feed
+*Auto-updated daily*
+
+### ⚠️ Latest CVEs
+Fetching...
+
+---
+
+### 💥 Recent Breaches · HaveIBeenPwned
+Fetching...
+<!-- SECURITY-END -->
+---
+
+**💥 Latest Breach Added to HIBP**
+**CarMax** `carmax.com` · 431,371 accounts exposed · Added 2026-02-20
+In January 2026, data allegedly sourced from US automotive retailer CarMax was published online following a failed extortion attempt. The data included 431k unique email addresses along with names,...
+Exposed data: `Email addresses` · `Names` · `Phone numbers` · `Physical addresses`
+<!-- SECURITY-END -->
+
+
 ---
 
 ## 📰 Reading List
@@ -25,23 +49,3 @@ Takes some effort to get through but worth it. A lot of how I think about authen
 **04 · [SoK: Attacks on Large Language Models](https://arxiv.org/abs/2402.06674)**
 `Yao et al. · 2024` &nbsp; `LLM Security` &nbsp; `Survey`
 The most complete map of the LLM attack landscape I've come across. Good place to start if you're trying to understand the threat surface before jumping into red teaming.
-
----
-
-<!-- SECURITY-START -->
-## 🔐 Live Threat Pulse
-*Auto-updated daily · 2026-02-20 08:02 UTC*
-
-**⚠️ Latest CVE**
-[`CVE-1999-0095`](https://nvd.nist.gov/vuln/detail/CVE-1999-0095) — CVSS 10.0 ⚪ None · Published 1988-10-01
-The debug command in Sendmail is enabled, allowing attackers to execute commands as root.
-
----
-
-**💥 Latest Breach Added to HIBP**
-**CarMax** `carmax.com` · 431,371 accounts exposed · Added 2026-02-20
-In January 2026, data allegedly sourced from US automotive retailer CarMax was published online following a failed extortion attempt. The data included 431k unique email addresses along with names,...
-Exposed data: `Email addresses` · `Names` · `Phone numbers` · `Physical addresses`
-<!-- SECURITY-END -->
-
-
