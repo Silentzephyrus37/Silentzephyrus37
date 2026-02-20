@@ -32,17 +32,13 @@ The most complete map of the LLM attack landscape I've come across. Good place t
 ---
 
 <!-- SECURITY-START -->
-## 🛰️ Threat Intelligence Feed
-*Auto-updated daily · 2026-02-20 08:50 UTC*
+## 🛰️ Threat Intelligence
+<p align="left"><i>Sync frequency: Daily • 2026-02-20 08:50 UTC</i></p>
 
-| ⚠️ Latest CVEs (NIST) | 💥 Recent Breaches (HIBP) |
+| Threat Analysis | Recent Breaches |
 | :--- | :--- |
-| [**CVE-1999-0095**](https://nvd.nist.gov/vuln/detail/CVE-1999-0095) <br> 🔴 **10.0** · The debug command in Sendmail... | **CarMax** • 431,371 <br> `Email` · `Names` |
-| [**CVE-1999-0082**](https://nvd.nist.gov/vuln/detail/CVE-1999-0082) <br> 🔴 **10.0** · CWD ~root command in ftpd... | **Figure** • 967,178 <br> `DOB` · `Email` |
-| [**CVE-1999-1471**](https://nvd.nist.gov/vuln/detail/CVE-1999-1471) <br> 🟡 **7.2** · Buffer overflow in passwd... | **Canada Goose** • 581,877 <br> `Device` · `IP` |
-| [**CVE-1999-1122**](https://nvd.nist.gov/vuln/detail/CVE-1999-1122) <br> 🟢 **4.6** · Vulnerability in restore in SunOS... | **UPenn** • 623,750 <br> `Donations` · `DOB` |
-| [**CVE-1999-1467**](https://nvd.nist.gov/vuln/detail/CVE-1999-1467) <br> 🔴 **10.0** · Vulnerability in rcp on SunOS... | **APOIAse** • 450,764 <br> `Email` · `Names` |
----
+| [`CVE-1999-0095`](https://nvd.nist.gov/vuln/detail/CVE-1999-0095) <br> `CRIT` ![#f85149](https://via.placeholder.com/10/f85149?text=+) **10.0** <br> The debug command in Sendmail is enabled, allowing attackers to execute commands as root. | **CarMax** <br> 431,371 accounts <br> `email addresses` `names` `phone numbers` |
+| [`CVE-1999-0082`](https://nvd.nist.gov/vuln/detail/CVE-1999-0082) <br> `CRIT` ![#f85149](https://via.placeholder.com/10/f85149?text=+) **10.0** <br> CWD ~root command in ftpd allows root access. | **Figure** <br> 967,178 accounts <br> `dates of birth` `email addresses` `names` |
 <!-- SECURITY-END -->
 ---
 
