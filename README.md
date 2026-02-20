@@ -33,7 +33,6 @@ The most complete map of the LLM attack landscape I've come across. Good place t
 
 <!-- SECURITY-START -->
 ## 🛰️ Threat Intelligence
-<p align="center"><i>Sync frequency: Daily • 2026-02-20 08:50 UTC</i></p>
 
 | Threat Analysis | Recent Breaches |
 | :---: | :---: |
