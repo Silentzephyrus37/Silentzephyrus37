@@ -7,13 +7,14 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; GitHubProfileBot/1.0)"
 }
 
-def get_latest_cve():
+def get_latest_cves(count=5):
     try:
-        url = "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=5&startIndex=0"
+        url = f"https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage={count}&startIndex=0"
         r = requests.get(url, headers=HEADERS, timeout=20)
         r.raise_for_status()
         data = r.json()
 
+        results = []
         for item in data.get('vulnerabilities', []):
             cve = item['cve']
             cve_id = cve['id']
@@ -22,8 +23,8 @@ def get_latest_cve():
                 (d['value'] for d in cve.get('descriptions', []) if d['lang'] == 'en'),
                 'No description available.'
             )
-            if len(desc) > 200:
-                desc = desc[:197] + "..."
+            if len(desc) > 150:
+                desc = desc[:147] + "..."
 
             score = None
             severity = None
@@ -38,15 +39,19 @@ def get_latest_cve():
                         continue
 
             published = cve.get('published', '')[:10]
-            print(f"Got CVE: {cve_id}")
-            return cve_id, desc, score, severity, published
+            results.append((cve_id, desc, score, severity, published))
+            if len(results) == count:
+                break
+
+        print(f"Got {len(results)} CVEs")
+        return results
 
     except Exception as e:
         print(f"CVE fetch error: {e}")
-        return "N/A", "Could not fetch CVE data at this time.", None, None, "N/A"
+        return [("N/A", "Could not fetch CVE data at this time.", None, None, "N/A")]
 
 
-def get_latest_breach():
+def get_latest_breaches(count=5):
     try:
         url = "https://haveibeenpwned.com/api/v3/breaches"
         r = requests.get(url, headers=HEADERS, timeout=20)
@@ -54,70 +59,82 @@ def get_latest_breach():
         breaches = r.json()
 
         breaches.sort(key=lambda x: x.get('AddedDate', ''), reverse=True)
-        b = breaches[0]
 
-        name = b.get('Name', 'Unknown')
-        domain = b.get('Domain', 'N/A')
-        pwn_count = b.get('PwnCount', 0)
-        added_date = b.get('AddedDate', '')[:10]
+        results = []
+        for b in breaches[:count]:
+            name = b.get('Name', 'Unknown')
+            domain = b.get('Domain', 'N/A')
+            pwn_count = b.get('PwnCount', 0)
+            added_date = b.get('AddedDate', '')[:10]
+            data_classes = b.get('DataClasses', [])[:3]
+            results.append((name, domain, pwn_count, added_date, data_classes))
 
-        raw_desc = re.sub(r'<[^>]+>', '', b.get('Description', ''))
-        raw_desc = re.sub(r'\s+', ' ', raw_desc).strip()
-        if len(raw_desc) > 200:
-            raw_desc = raw_desc[:197] + "..."
-
-        data_classes = b.get('DataClasses', [])[:4]
-        print(f"Got breach: {name}")
-        return name, domain, pwn_count, added_date, raw_desc, data_classes
+        print(f"Got {len(results)} breaches")
+        return results
 
     except Exception as e:
         print(f"Breach fetch error: {e}")
-        return "N/A", "N/A", 0, "N/A", "Could not fetch breach data at this time.", []
+        return [("N/A", "N/A", 0, "N/A", [])]
 
 
 def severity_emoji(severity):
     mapping = {
         'CRITICAL': '🔴',
-        'HIGH': '🟠',
-        'MEDIUM': '🟡',
-        'LOW': '🟢',
+        'HIGH':     '🟠',
+        'MEDIUM':   '🟡',
+        'LOW':      '🟢',
     }
     return mapping.get(str(severity).upper(), '⚪') if severity else '⚪'
 
 
 def update_readme():
-    print("Fetching latest CVE...")
-    cve_id, cve_desc, score, severity, published = get_latest_cve()
-
-    print("Fetching latest breach...")
-    b_name, b_domain, b_count, b_date, b_desc, b_classes = get_latest_breach()
-
     now = datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')
-    sev_icon = severity_emoji(severity)
-    score_str = f"CVSS {score} {sev_icon} {severity}" if score else "Score N/A"
-    classes_str = " · ".join(f"`{c}`" for c in b_classes) if b_classes else "N/A"
+
+    print("Fetching top 5 CVEs...")
+    cves = get_latest_cves(5)
+
+    print("Fetching top 5 breaches...")
+    breaches = get_latest_breaches(5)
+
+    # Build CVE lines
+    cve_lines = []
+    for i, (cve_id, desc, score, severity, published) in enumerate(cves, 1):
+        icon = severity_emoji(severity)
+        score_str = f"CVSS {score} {icon} {severity}" if score else "Score N/A"
+        cve_lines.append(
+            f"**{i}. [`{cve_id}`](https://nvd.nist.gov/vuln/detail/{cve_id})** — {score_str} · {published}\n{desc}"
+        )
+    cve_block = "\n\n".join(cve_lines)
+
+    # Build breach lines
+    breach_lines = []
+    for i, (name, domain, count, added_date, data_classes) in enumerate(breaches, 1):
+        classes_str = " · ".join(f"`{c}`" for c in data_classes) if data_classes else "N/A"
+        breach_lines.append(
+            f"**{i}. {name}** `{domain}` · {int(count):,} accounts · Added {added_date}\nExposed: {classes_str}"
+        )
+    breach_block = "\n\n".join(breach_lines)
 
     section = f"""<!-- SECURITY-START -->
-## 🔐 Live Threat Pulse
+## 🛰 Threat Intelligence Feed
 *Auto-updated daily · {now}*
 
-**⚠️ Latest CVE**
-[`{cve_id}`](https://nvd.nist.gov/vuln/detail/{cve_id}) — {score_str} · Published {published}
-{cve_desc}
+### ⚠️ Latest CVEs
+
+{cve_block}
 
 ---
 
-**💥 Latest Breach Added to HIBP**
-**{b_name}** `{b_domain}` · {int(b_count):,} accounts exposed · Added {b_date}
-{b_desc}
-Exposed data: {classes_str}
+### 💥 Recent Breaches · HaveIBeenPwned
+
+{breach_block}
 <!-- SECURITY-END -->"""
 
     try:
         with open('README.md', 'r', encoding='utf-8') as f:
             content = f.read()
     except FileNotFoundError:
-        print("ERROR: README.md not found in current directory")
+        print("ERROR: README.md not found")
         sys.exit(1)
 
     if '<!-- SECURITY-START -->' not in content:
