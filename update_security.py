@@ -1,57 +1,78 @@
 import requests
 import re
+import sys
 from datetime import datetime
 
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (compatible; GitHubProfileBot/1.0)"
+}
+
 def get_latest_cve():
-    url = "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=1&startIndex=0"
-    r = requests.get(url, headers={"User-Agent": "GitHubProfileBot/1.0"}, timeout=10)
-    r.raise_for_status()
-    data = r.json()
-    cve = data['vulnerabilities'][0]['cve']
+    try:
+        url = "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=5&startIndex=0"
+        r = requests.get(url, headers=HEADERS, timeout=20)
+        r.raise_for_status()
+        data = r.json()
 
-    cve_id = cve['id']
+        for item in data.get('vulnerabilities', []):
+            cve = item['cve']
+            cve_id = cve['id']
 
-    desc = next(
-        (d['value'] for d in cve['descriptions'] if d['lang'] == 'en'),
-        'No description available.'
-    )
-    if len(desc) > 160:
-        desc = desc[:157] + "..."
+            desc = next(
+                (d['value'] for d in cve.get('descriptions', []) if d['lang'] == 'en'),
+                'No description available.'
+            )
+            if len(desc) > 200:
+                desc = desc[:197] + "..."
 
-    score = None
-    severity = None
-    metrics = cve.get('metrics', {})
-    for key in ['cvssMetricV31', 'cvssMetricV30', 'cvssMetricV2']:
-        if key in metrics:
-            score = metrics[key][0]['cvssData']['baseScore']
-            severity = metrics[key][0]['cvssData']['baseSeverity']
-            break
+            score = None
+            severity = None
+            metrics = cve.get('metrics', {})
+            for key in ['cvssMetricV31', 'cvssMetricV30', 'cvssMetricV2']:
+                if key in metrics and metrics[key]:
+                    try:
+                        score = metrics[key][0]['cvssData']['baseScore']
+                        severity = metrics[key][0]['cvssData']['baseSeverity']
+                        break
+                    except (KeyError, IndexError):
+                        continue
 
-    published = cve.get('published', '')[:10]
-    return cve_id, desc, score, severity, published
+            published = cve.get('published', '')[:10]
+            print(f"Got CVE: {cve_id}")
+            return cve_id, desc, score, severity, published
+
+    except Exception as e:
+        print(f"CVE fetch error: {e}")
+        return "N/A", "Could not fetch CVE data at this time.", None, None, "N/A"
 
 
 def get_latest_breach():
-    url = "https://haveibeenpwned.com/api/v3/breaches"
-    r = requests.get(url, headers={"User-Agent": "GitHubProfileBot/1.0"}, timeout=10)
-    r.raise_for_status()
-    breaches = r.json()
+    try:
+        url = "https://haveibeenpwned.com/api/v3/breaches"
+        r = requests.get(url, headers=HEADERS, timeout=20)
+        r.raise_for_status()
+        breaches = r.json()
 
-    breaches.sort(key=lambda x: x['AddedDate'], reverse=True)
-    b = breaches[0]
+        breaches.sort(key=lambda x: x.get('AddedDate', ''), reverse=True)
+        b = breaches[0]
 
-    name = b['Name']
-    domain = b.get('Domain', 'N/A')
-    pwn_count = b['PwnCount']
-    added_date = b['AddedDate'][:10]
+        name = b.get('Name', 'Unknown')
+        domain = b.get('Domain', 'N/A')
+        pwn_count = b.get('PwnCount', 0)
+        added_date = b.get('AddedDate', '')[:10]
 
-    # Strip HTML tags from description
-    raw_desc = re.sub(r'<[^>]+>', '', b.get('Description', ''))
-    if len(raw_desc) > 160:
-        raw_desc = raw_desc[:157] + "..."
+        raw_desc = re.sub(r'<[^>]+>', '', b.get('Description', ''))
+        raw_desc = re.sub(r'\s+', ' ', raw_desc).strip()
+        if len(raw_desc) > 200:
+            raw_desc = raw_desc[:197] + "..."
 
-    data_classes = b.get('DataClasses', [])[:4]
-    return name, domain, pwn_count, added_date, raw_desc, data_classes
+        data_classes = b.get('DataClasses', [])[:4]
+        print(f"Got breach: {name}")
+        return name, domain, pwn_count, added_date, raw_desc, data_classes
+
+    except Exception as e:
+        print(f"Breach fetch error: {e}")
+        return "N/A", "N/A", 0, "N/A", "Could not fetch breach data at this time.", []
 
 
 def severity_emoji(severity):
@@ -61,7 +82,7 @@ def severity_emoji(severity):
         'MEDIUM': '🟡',
         'LOW': '🟢',
     }
-    return mapping.get(str(severity).upper(), '⚪')
+    return mapping.get(str(severity).upper(), '⚪') if severity else '⚪'
 
 
 def update_readme():
@@ -92,8 +113,16 @@ def update_readme():
 Exposed data: {classes_str}
 <!-- SECURITY-END -->"""
 
-    with open('README.md', 'r') as f:
-        content = f.read()
+    try:
+        with open('README.md', 'r', encoding='utf-8') as f:
+            content = f.read()
+    except FileNotFoundError:
+        print("ERROR: README.md not found in current directory")
+        sys.exit(1)
+
+    if '<!-- SECURITY-START -->' not in content:
+        print("ERROR: Could not find <!-- SECURITY-START --> markers in README.md")
+        sys.exit(1)
 
     new_content = re.sub(
         r'<!-- SECURITY-START -->.*?<!-- SECURITY-END -->',
@@ -102,7 +131,7 @@ Exposed data: {classes_str}
         flags=re.DOTALL
     )
 
-    with open('README.md', 'w') as f:
+    with open('README.md', 'w', encoding='utf-8') as f:
         f.write(new_content)
 
     print(f"README updated successfully at {now}")
