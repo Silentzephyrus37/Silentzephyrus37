@@ -1,6 +1,6 @@
-Hi, I'm Samuel, a cybersecurity graduate student at Iowa State wrapping up my MS. I care a lot about making security tools that people actually want to use, not just ones that technically work. Lately most of my time goes into AI/LLM security: figuring out how language models get abused, what agentic workflows get wrong, and what good defenses actually look like in practice.
+Hi, I’m Samuel. I’m a Security Researcher driven by a simple question: Why does security so often feel like it’s fighting the user? I believe that the strongest defenses are those that protect people without getting in their way, turning security into a seamless asset rather than a technical hurdle.
 
-I've worked across threat detection, adaptive authentication, and security monitoring. The question I keep coming back to is pretty simple: why does security so often feel like it's fighting the user instead of protecting them?
+I am currently focused on the intersection of AI and LLM security, specifically identifying vulnerabilities in agentic workflows and adversarial prompt engineering. My goal is to engineer robust, invisible guardrails that secure autonomous systems while preserving the intuitive experience that users expect.
 
 ![GitHub Space Shooter](game.gif)
 
