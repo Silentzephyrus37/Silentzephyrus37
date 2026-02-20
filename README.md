@@ -32,44 +32,17 @@ The most complete map of the LLM attack landscape I've come across. Good place t
 ---
 
 <!-- SECURITY-START -->
-## 🛰 Threat Intelligence Feed
+## 🛰️ Threat Intelligence Feed
 *Auto-updated daily · 2026-02-20 08:50 UTC*
 
-### ⚠️ Latest CVEs
-
-**1. [`CVE-1999-0095`](https://nvd.nist.gov/vuln/detail/CVE-1999-0095)** — CVSS 10.0 ⚪ None · 1988-10-01
-The debug command in Sendmail is enabled, allowing attackers to execute commands as root.
-
-**2. [`CVE-1999-0082`](https://nvd.nist.gov/vuln/detail/CVE-1999-0082)** — CVSS 10.0 ⚪ None · 1988-11-11
-CWD ~root command in ftpd allows root access.
-
-**3. [`CVE-1999-1471`](https://nvd.nist.gov/vuln/detail/CVE-1999-1471)** — CVSS 7.2 ⚪ None · 1989-01-01
-Buffer overflow in passwd in BSD based operating systems 4.3 and earlier allows local users to gain root privileges by specifying a long shell or G...
-
-**4. [`CVE-1999-1122`](https://nvd.nist.gov/vuln/detail/CVE-1999-1122)** — CVSS 4.6 ⚪ None · 1989-07-26
-Vulnerability in restore in SunOS 4.0.3 and earlier allows local users to gain privileges.
-
-**5. [`CVE-1999-1467`](https://nvd.nist.gov/vuln/detail/CVE-1999-1467)** — CVSS 10.0 ⚪ None · 1989-10-26
-Vulnerability in rcp on SunOS 4.0.x allows remote attackers from trusted hosts to execute arbitrary commands as root, possibly related to the confi...
-
+| ⚠️ Latest CVEs (NIST) | 💥 Recent Breaches (HIBP) |
+| :--- | :--- |
+| [**CVE-1999-0095**](https://nvd.nist.gov/vuln/detail/CVE-1999-0095) <br> 🔴 **10.0** · The debug command in Sendmail... | **CarMax** • 431,371 <br> `Email` · `Names` |
+| [**CVE-1999-0082**](https://nvd.nist.gov/vuln/detail/CVE-1999-0082) <br> 🔴 **10.0** · CWD ~root command in ftpd... | **Figure** • 967,178 <br> `DOB` · `Email` |
+| [**CVE-1999-1471**](https://nvd.nist.gov/vuln/detail/CVE-1999-1471) <br> 🟡 **7.2** · Buffer overflow in passwd... | **Canada Goose** • 581,877 <br> `Device` · `IP` |
+| [**CVE-1999-1122**](https://nvd.nist.gov/vuln/detail/CVE-1999-1122) <br> 🟢 **4.6** · Vulnerability in restore in SunOS... | **UPenn** • 623,750 <br> `Donations` · `DOB` |
+| [**CVE-1999-1467**](https://nvd.nist.gov/vuln/detail/CVE-1999-1467) <br> 🔴 **10.0** · Vulnerability in rcp on SunOS... | **APOIAse** • 450,764 <br> `Email` · `Names` |
 ---
-
-### 💥 Recent Breaches · HaveIBeenPwned
-
-**1. CarMax** `carmax.com` · 431,371 accounts · Added 2026-02-20
-Exposed: `Email addresses` · `Names` · `Phone numbers`
-
-**2. Figure** `figure.com` · 967,178 accounts · Added 2026-02-18
-Exposed: `Dates of birth` · `Email addresses` · `Names`
-
-**3. CanadaGoose** `canadagoose.com` · 581,877 accounts · Added 2026-02-17
-Exposed: `Device information` · `Email addresses` · `IP addresses`
-
-**4. UniversityOfPennsylvania** `upenn.edu` · 623,750 accounts · Added 2026-02-16
-Exposed: `Charitable donations` · `Dates of birth` · `Email addresses`
-
-**5. APOIAse** `apoia.se` · 450,764 accounts · Added 2026-02-16
-Exposed: `Email addresses` · `Names` · `Physical addresses`
 <!-- SECURITY-END -->
 ---
 
