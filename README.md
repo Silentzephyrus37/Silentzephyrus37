@@ -33,14 +33,11 @@ The most complete map of the LLM attack landscape I've come across. Good place t
 
 <!-- SECURITY-START -->
 ## 🛰️ Threat Intelligence
-<p align="center"><i>Refresh: Daily • 2026-02-20 12:50 UTC</i></p>
 
-| Threat Analysis | Recent Breaches |
+| Threat Analysis &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Recent Breach News &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | :---: | :---: |
-| [`CVE-1999-0095`](https://nvd.nist.gov/vuln/detail/CVE-1999-0095) &nbsp; **10.0** &nbsp; 🔴 `CRIT` <br> Sendmail debug command is enabled, allowing root command execution. | [**CarMax**](https://carmax.com) • 431,371 <br> `email` `names` `phone` |
-| [`CVE-1999-0082`](https://nvd.nist.gov/vuln/detail/CVE-1999-0082) &nbsp; **10.0** &nbsp; 🔴 `CRIT` <br> CWD ~root command in ftpd allows direct root access. | [**Figure**](https://figure.com) • 967,178 <br> `dob` `email` `names` |
-| [`CVE-1999-1471`](https://nvd.nist.gov/vuln/detail/CVE-1999-1471) &nbsp; **7.2** &nbsp; 🟡 `MED` <br> Buffer overflow in passwd allows local users to gain root privileges. | [**Canada Goose**](https://canadagoose.com) • 581,877 <br> `device` `ip` `email` |
+| [`CVE-1999-0095`](https://nvd.nist.gov/vuln/detail/CVE-1999-0095) &nbsp; **10.0** &nbsp; 🔴 `CRIT` <br> Sendmail debug command is enabled, allowing root command execution. |[**CarMax**](https://www.google.com/search?q=CarMax+carmax.com+breach+news+2026&tbm=nws) • 431,371 <br> `email` `names` `phone` |
+| [`CVE-1999-0082`](https://nvd.nist.gov/vuln/detail/CVE-1999-0082) &nbsp; **10.0** &nbsp; 🔴 `CRIT` <br> CWD ~root command in ftpd allows direct root access. | [**Figure**](https://www.google.com/search?q=Figure+figure.com+breach+news+2026&tbm=nws) • 967,178 <br> `dob` `email` `names` |
+| [`CVE-1999-1471`](https://nvd.nist.gov/vuln/detail/CVE-1999-1471) &nbsp; **7.2** &nbsp; 🟡 `MED` <br> Buffer overflow in passwd allows local users to gain root privileges. | [**Canada Goose**]([https://canadagoose.com](https://www.google.com/search?q=CanadaGoose+canadagoose.com+breach+news+2026&tbm=nws)) • 581,877 <br> `device` `ip` `email` |
 <!-- SECURITY-END -->
 ---
-
-
