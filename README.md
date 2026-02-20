@@ -9,15 +9,43 @@ I've worked across threat detection, adaptive authentication, and security monit
 
 <!-- SECURITY-START -->
 ## 🛰 Threat Intelligence Feed
-*Auto-updated daily*
+*Auto-updated daily · 2026-02-20 08:13 UTC*
 
 ### ⚠️ Latest CVEs
-Fetching...
+
+**1. [`CVE-1999-0095`](https://nvd.nist.gov/vuln/detail/CVE-1999-0095)** — CVSS 10.0 ⚪ None · 1988-10-01
+The debug command in Sendmail is enabled, allowing attackers to execute commands as root.
+
+**2. [`CVE-1999-0082`](https://nvd.nist.gov/vuln/detail/CVE-1999-0082)** — CVSS 10.0 ⚪ None · 1988-11-11
+CWD ~root command in ftpd allows root access.
+
+**3. [`CVE-1999-1471`](https://nvd.nist.gov/vuln/detail/CVE-1999-1471)** — CVSS 7.2 ⚪ None · 1989-01-01
+Buffer overflow in passwd in BSD based operating systems 4.3 and earlier allows local users to gain root privileges by specifying a long shell or G...
+
+**4. [`CVE-1999-1122`](https://nvd.nist.gov/vuln/detail/CVE-1999-1122)** — CVSS 4.6 ⚪ None · 1989-07-26
+Vulnerability in restore in SunOS 4.0.3 and earlier allows local users to gain privileges.
+
+**5. [`CVE-1999-1467`](https://nvd.nist.gov/vuln/detail/CVE-1999-1467)** — CVSS 10.0 ⚪ None · 1989-10-26
+Vulnerability in rcp on SunOS 4.0.x allows remote attackers from trusted hosts to execute arbitrary commands as root, possibly related to the confi...
 
 ---
 
 ### 💥 Recent Breaches · HaveIBeenPwned
-Fetching...
+
+**1. CarMax** `carmax.com` · 431,371 accounts · Added 2026-02-20
+Exposed: `Email addresses` · `Names` · `Phone numbers`
+
+**2. Figure** `figure.com` · 967,178 accounts · Added 2026-02-18
+Exposed: `Dates of birth` · `Email addresses` · `Names`
+
+**3. CanadaGoose** `canadagoose.com` · 581,877 accounts · Added 2026-02-17
+Exposed: `Device information` · `Email addresses` · `IP addresses`
+
+**4. UniversityOfPennsylvania** `upenn.edu` · 623,750 accounts · Added 2026-02-16
+Exposed: `Charitable donations` · `Dates of birth` · `Email addresses`
+
+**5. APOIAse** `apoia.se` · 450,764 accounts · Added 2026-02-16
+Exposed: `Email addresses` · `Names` · `Physical addresses`
 <!-- SECURITY-END -->
 ---
 
