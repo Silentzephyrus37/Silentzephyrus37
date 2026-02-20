@@ -33,11 +33,13 @@ The most complete map of the LLM attack landscape I've come across. Good place t
 
 <!-- SECURITY-START -->
 ## 🛰️ Threat Intelligence
+<p align="center"><i>Refresh: Daily • 2026-02-20 12:50 UTC</i></p>
 
 | Threat Analysis | Recent Breaches |
 | :---: | :---: |
-| [`CVE-1999-0095`](https://nvd.nist.gov/vuln/detail/CVE-1999-0095) &nbsp; **10.0** 🔴 `CRIT` <br> The debug command in Sendmail is enabled, allowing attackers to execute commands as root. | **CarMax** • 431,371 accounts <br> `email` `names` `phone` |
-| [`CVE-1999-0082`](https://nvd.nist.gov/vuln/detail/CVE-1999-0082) &nbsp; **10.0** 🔴 `CRIT` <br> CWD ~root command in ftpd allows root access to the underlying operating system. | **Figure** • 967,178 accounts <br> `dob` `email` `names` |
+| [`CVE-1999-0095`](https://nvd.nist.gov/vuln/detail/CVE-1999-0095) &nbsp; **10.0** &nbsp; 🔴 `CRIT` <br> Sendmail debug command is enabled, allowing root command execution. | [**CarMax**](https://carmax.com) • 431,371 <br> `email` `names` `phone` |
+| [`CVE-1999-0082`](https://nvd.nist.gov/vuln/detail/CVE-1999-0082) &nbsp; **10.0** &nbsp; 🔴 `CRIT` <br> CWD ~root command in ftpd allows direct root access. | [**Figure**](https://figure.com) • 967,178 <br> `dob` `email` `names` |
+| [`CVE-1999-1471`](https://nvd.nist.gov/vuln/detail/CVE-1999-1471) &nbsp; **7.2** &nbsp; 🟡 `MED` <br> Buffer overflow in passwd allows local users to gain root privileges. | [**Canada Goose**](https://canadagoose.com) • 581,877 <br> `device` `ip` `email` |
 <!-- SECURITY-END -->
 ---
 
