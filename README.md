@@ -29,7 +29,7 @@ The most complete map of the LLM attack landscape I've come across. Good place t
 
 <!-- SECURITY-START -->
 ## 🛰 Threat Intelligence Feed
-
+*Auto-updated daily · 2026-02-20 08:50 UTC*
 
 ### ⚠️ Latest CVEs
 
@@ -50,7 +50,7 @@ Vulnerability in rcp on SunOS 4.0.x allows remote attackers from trusted hosts t
 
 ---
 
-### 💥 Recent Breaches 
+### 💥 Recent Breaches · HaveIBeenPwned
 
 **1. CarMax** `carmax.com` · 431,371 accounts · Added 2026-02-20
 Exposed: `Email addresses` · `Names` · `Phone numbers`
