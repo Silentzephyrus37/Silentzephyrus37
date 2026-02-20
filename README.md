@@ -1,11 +1,8 @@
+<img align="right" width="200" src="octocat.gif" alt="Octocat detective" />
+
 Hi, I’m Samuel. I’m a Security Researcher driven by a simple question: Why does security so often feel like it’s fighting the user? I believe that the strongest defenses are those that protect people without getting in their way, turning security into a seamless asset rather than a technical hurdle.I am currently focused on the intersection of AI and LLM security, specifically identifying vulnerabilities in agentic workflows and adversarial prompt engineering. My goal is to engineer robust, invisible guardrails that secure autonomous systems while preserving the intuitive experience that users expect.
 
-</td>
-<td valign="middle" width="35%" align="center">
-  <img src="octocat.gif" width="200" alt="Octocat detective" />
-</td>
-</tr>
-</table>
+<br clear="right"/>
 
 ## 📰 Reading List
 
