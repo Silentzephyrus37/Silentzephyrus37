@@ -62,14 +62,14 @@ def get_latest_breaches(count=5):
         return [("N/A", 0, [])] * count
 
 def severity_style(severity):
-    # Minimalist status indicators using 10px GitHub-native color placeholders
+    # Using standard Unicode circles - GitHub renders these natively with no external loading issues.
     mapping = {
-        'CRITICAL': '`CRIT` ![#f85149](https://via.placeholder.com/10/f85149?text=+) ',
-        'HIGH':     '`HIGH` ![#f0883e](https://via.placeholder.com/10/f0883e?text=+) ',
-        'MEDIUM':   '`MED`  ![#d29922](https://via.placeholder.com/10/d29922?text=+) ',
-        'LOW':      '`LOW`  ![#3fb950](https://via.placeholder.com/10/3fb950?text=+) ',
+        'CRITICAL': '🔴 `CRIT` ',
+        'HIGH':     '🟠 `HIGH` ',
+        'MEDIUM':   '🟡 `MED` ',
+        'LOW':      '🟢 `LOW` ',
     }
-    return mapping.get(str(severity).upper(), '`N/A`')
+    return mapping.get(str(severity).upper(), '⚪ `N/A`')
 
 def update_readme():
     now = datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')
@@ -78,22 +78,21 @@ def update_readme():
 
     table_rows = []
     for (cve_id, desc, score, sev), (b_name, b_count, b_data) in zip(cves, breaches):
-        # COLUMN 1: Slim Threat Analysis
-        # We put status and score on one line to reduce "bulk"
+        # Column 1: Occupying more space
+        # We use a non-breaking space (&nbsp;) to prevent the header from collapsing
         status = severity_style(sev)
-        cve_header = f"[`{cve_id}`](https://nvd.nist.gov/vuln/detail/{cve_id}) | **{score}** {status}"
+        cve_header = f"[`{cve_id}`](https://nvd.nist.gov/vuln/detail/{cve_id}) &nbsp; **{score}** {status}"
         
-        # Keep description short (approx 100 chars) to prevent vertical stretching
-        short_desc = (desc[:110] + '...') if len(desc) > 110 else desc
-        cve_col = f"{cve_header} <br> {short_desc}"
+        # We don't truncate much here, so it uses the full horizontal width
+        cve_col = f"{cve_header} <br> {desc}"
         
-        # COLUMN 2: Slim Recent Breaches
+        # Column 2: Occupying more space
         data_str = " ".join(f"`{d.lower()}`" for d in b_data)
-        breach_col = f"**{b_name}** • {int(b_count):,} <br> {data_str}"
+        breach_col = f"**{b_name}** • {int(b_count):,} accounts <br> {data_str}"
         
         table_rows.append(f"| {cve_col} | {breach_col} |")
 
-    # The ":---:" centers the text in both columns
+    # Center alignment for professional 'Dashboard' look
     table_header = "| Threat Analysis | Recent Breaches |\n| :---: | :---: |"
     table_body = "\n".join(table_rows)
 
@@ -102,8 +101,9 @@ def update_readme():
 
 {table_header}
 {table_body}
-"""
 
+"""
+    
     try:
         with open('README.md', 'r', encoding='utf-8') as f:
             content = f.read()
