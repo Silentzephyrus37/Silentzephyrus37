@@ -9,7 +9,7 @@ I've worked across threat detection, adaptive authentication, and security monit
 
 <!-- SECURITY-START -->
 ## 🛰 Threat Intelligence Feed
-*Auto-updated daily · 2026-02-20 08:13 UTC*
+
 
 ### ⚠️ Latest CVEs
 
@@ -30,7 +30,7 @@ Vulnerability in rcp on SunOS 4.0.x allows remote attackers from trusted hosts t
 
 ---
 
-### 💥 Recent Breaches · HaveIBeenPwned
+### 💥 Recent Breaches 
 
 **1. CarMax** `carmax.com` · 431,371 accounts · Added 2026-02-20
 Exposed: `Email addresses` · `Names` · `Phone numbers`
