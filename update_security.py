@@ -6,13 +6,13 @@ from datetime import datetime, timedelta
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; GitHubProfileBot/1.0)"}
 
-def severity_label(severity):
+def severity_badge(severity):
     return {
-        'CRITICAL': '🔴 CRIT',
-        'HIGH':     '🟠 HIGH',
-        'MEDIUM':   '🟡 MED',
-        'LOW':      '🟢 LOW',
-    }.get(str(severity).upper(), '⚪ N/A') if severity else '⚪ N/A'
+        'CRITICAL': '![CRITICAL](https://img.shields.io/badge/CRITICAL-FF0000?style=flat-square)',
+        'HIGH':     '![HIGH](https://img.shields.io/badge/HIGH-FF6600?style=flat-square)',
+        'MEDIUM':   '![MEDIUM](https://img.shields.io/badge/MEDIUM-FFAA00?style=flat-square)',
+        'LOW':      '![LOW](https://img.shields.io/badge/LOW-339900?style=flat-square)',
+    }.get(str(severity).upper(),  '![N/A](https://img.shields.io/badge/N/A-555555?style=flat-square)') if severity else '![N/A](https://img.shields.io/badge/N/A-555555?style=flat-square)'
 
 def get_latest_cves(count=3):
     try:
@@ -54,7 +54,7 @@ def get_latest_cves(count=3):
                         continue
             if not score:
                 continue
-            if len(desc) > 100: desc = desc[:97] + "..."
+            if len(desc) > 96: desc = desc[:93] + "..."
             published = cve.get('published', '')[:10]
             results.append((cve_id, desc, score, severity, published))
 
@@ -93,35 +93,34 @@ def update_readme():
 
     rows = []
     for (cve_id, desc, score, sev, published), (name, domain, count, added, classes) in zip(cves, breaches):
-        sev_str  = severity_label(sev)
-        tags     = " &nbsp; ".join(f"`{d.lower()}`" for d in classes) if classes else "`N/A`"
+        badge    = severity_badge(sev)
+        tags     = " ".join(f"`{d.lower()}`" for d in classes) if classes else "`—`"
         query    = urllib.parse.quote(f"{name} data breach")
         news_url = f"https://www.google.com/search?q={query}&tbm=nws"
 
         col_cve = (
-            f"**[{cve_id}](https://nvd.nist.gov/vuln/detail/{cve_id})**"
-            f"&nbsp;&nbsp;`{score}` {sev_str}&nbsp;&nbsp;📅 `{published}`"
-            f"<br><sub>{desc}</sub>"
+            f"[**`{cve_id}`**](https://nvd.nist.gov/vuln/detail/{cve_id}) {badge} **{score}**<br>"
+            f"<sub>{desc}</sub><br>"
+            f"<sub>Published: `{published}`</sub>"
         )
         col_breach = (
-            f"**[{name}]({news_url})**&nbsp;&nbsp;`{domain}`"
-            f"<br>💥 `{int(count):,}` accounts&nbsp;&nbsp;📅 `{added}`"
-            f"<br><sub>{tags}</sub>"
+            f"[**{name}**]({news_url}) &nbsp; <sub>`{domain}`</sub><br>"
+            f"<sub>**{int(count):,}** accounts compromised</sub><br>"
+            f"<sub>Data: {tags} &nbsp;·&nbsp; Added: `{added}`</sub>"
         )
         rows.append(f"| {col_cve} | {col_breach} |")
 
-    # Use HTML spacers to force equal 50/50 column widths
-    spacer = "&nbsp;" * 40
+    spacer = "&nbsp;" * 35
     table = (
-        f"| ⚠️ Latest CVE {spacer} | 💥 Latest Breach {spacer} |\n"
+        f"| VULNERABILITY {spacer} | BREACH DISCLOSURE {spacer} |\n"
         "| :--- | :--- |\n"
         + "\n".join(rows)
     )
 
     section = (
         f"<!-- SECURITY-START -->\n"
-        f"## 🛰 Threat Intelligence Feed\n"
-        f"<sub>Auto-updated daily · {now}</sub>\n\n"
+        f"## Threat Intelligence Feed\n"
+        f"<sub>Automated · NVD + HaveIBeenPwned · Last updated: {now}</sub>\n\n"
         f"{table}\n"
         f"<!-- SECURITY-END -->"
     )
