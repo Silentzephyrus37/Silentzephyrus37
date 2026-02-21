@@ -32,15 +32,27 @@ The most complete map of the LLM attack landscape I've come across. Good place t
 ---
 
 <!-- SECURITY-START -->
-## 🛰️ Threat Intelligence Pulse
-<p align="center"><i>Active Monitoring • 2026-02-20 13:10 UTC</i></p>
+## 🛰 Threat Intelligence Feed
+<p align='center'><sub>Active Monitoring · 2026-02-21 07:34 UTC</sub></p>
 
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vulnerability &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Analysis | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Breach News &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-| :---: | :---: | :---: |
-| [`CVE-1999-0095`](https://nvd.nist.gov/vuln/detail/CVE-1999-0095) <br> **10.0** &nbsp; 🔴 `CRIT` | <sub>Sendmail debug enabled, allowing root command execution via shell.</sub> | [**CarMax**](https://www.google.com/search?q=CarMax+data+breach+news+2026&tbm=nws) ↗️ <br> 431,371 accounts <br> `email` `names` |
-| [`CVE-1999-0082`](https://nvd.nist.gov/vuln/detail/CVE-1999-0082) <br> **10.0** &nbsp; 🔴 `CRIT` | <sub>ftpd CWD ~root command allows direct unauthorized root access.</sub> | [**Figure**](https://www.google.com/search?q=Figure+data+breach+news+2026&tbm=nws) ↗️ <br> 967,178 accounts <br> `email` `names` |
-| [`CVE-1999-1471`](https://nvd.nist.gov/vuln/detail/CVE-1999-1471) <br> **7.2** &nbsp; 🟡 `MED` | <sub>Buffer overflow in passwd allows root privilege escalation.</sub> | [**Canada Goose**](https://www.google.com/search?q=Canada+Goose+data+breach+news+2026&tbm=nws) ↗️ <br> 581,877 accounts <br> `ip` `email` |
+### ⚠️ Latest CVEs
 
+| CVE ID | Affected Product | Description |
+| :--- | :---: | :--- |
+| [`CVE-1999-1216`](https://nvd.nist.gov/vuln/detail/CVE-1999-1216)<br>**7.5** ⚪ `N/A` | `Cisco Router`<br><sub>1993-04-22</sub> | <sub>Cisco routers 9.17 and earlier allow remote attackers to bypass security restrictions via certain IP...</sub> |
+| [`CVE-1999-1312`](https://nvd.nist.gov/vuln/detail/CVE-1999-1312)<br>**7.2** ⚪ `N/A` | `Dec Dec Openvms Axp`<br><sub>1993-02-24</sub> | <sub>Vulnerability in DEC OpenVMS VAX 5.5-2 through 5.0, and OpenVMS AXP 1.0, allows local users to gain ...</sub> |
+| [`CVE-1999-1218`](https://nvd.nist.gov/vuln/detail/CVE-1999-1218)<br>**2.1** ⚪ `N/A` | `Commodore Amiga Unix`<br><sub>1993-02-18</sub> | <sub>Vulnerability in finger in Commodore Amiga UNIX 2.1p2a and earlier allows local users to read arbitr...</sub> |
+| [`CVE-1999-1507`](https://nvd.nist.gov/vuln/detail/CVE-1999-1507)<br>**7.2** ⚪ `N/A` | `Sun Sunos`<br><sub>1993-02-03</sub> | <sub>Sun SunOS 4.1 through 4.1.3 allows local attackers to gain root access via insecure permissions on f...</sub> |
+| [`CVE-1999-0312`](https://nvd.nist.gov/vuln/detail/CVE-1999-0312)<br>**5.0** ⚪ `N/A` | `Hp Hp-Ux`<br><sub>1993-01-13</sub> | <sub>HP ypbind allows attackers with root privileges to modify NIS data.</sub> |
 
+### 💥 Recent Breaches
+
+| Company | Exposed | Date Added | Data Types |
+| :--- | :---: | :---: | :--- |
+| [**CarMax**](https://www.google.com/search?q=CarMax%20data%20breach&tbm=nws) ↗<br><sub>`carmax.com`</sub> | **431,371**<br><sub>accounts</sub> | <sub>2026-02-20</sub> | <sub>`email addresses` `names` `phone numbers` `physical addresses`</sub> |
+| [**Figure**](https://www.google.com/search?q=Figure%20data%20breach&tbm=nws) ↗<br><sub>`figure.com`</sub> | **967,178**<br><sub>accounts</sub> | <sub>2026-02-18</sub> | <sub>`dates of birth` `email addresses` `names` `phone numbers`</sub> |
+| [**CanadaGoose**](https://www.google.com/search?q=CanadaGoose%20data%20breach&tbm=nws) ↗<br><sub>`canadagoose.com`</sub> | **581,877**<br><sub>accounts</sub> | <sub>2026-02-17</sub> | <sub>`device information` `email addresses` `ip addresses` `names`</sub> |
+| [**UniversityOfPennsylvania**](https://www.google.com/search?q=UniversityOfPennsylvania%20data%20breach&tbm=nws) ↗<br><sub>`upenn.edu`</sub> | **623,750**<br><sub>accounts</sub> | <sub>2026-02-16</sub> | <sub>`charitable donations` `dates of birth` `email addresses` `genders`</sub> |
+| [**APOIAse**](https://www.google.com/search?q=APOIAse%20data%20breach&tbm=nws) ↗<br><sub>`apoia.se`</sub> | **450,764**<br><sub>accounts</sub> | <sub>2026-02-16</sub> | <sub>`email addresses` `names` `physical addresses`</sub> |
 <!-- SECURITY-END -->
 ---
