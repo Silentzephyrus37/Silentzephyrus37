@@ -33,12 +33,12 @@ The most complete map of the LLM attack landscape I've come across. Good place t
 
 <!-- SECURITY-START -->
 ## 🛰 Threat Intelligence Feed
-<sub>Auto-updated daily · 2026-02-21 07:44 UTC</sub>
+<sub>Auto-updated daily · 2026-02-21 07:48 UTC</sub>
 
 | ⚠️ CVE | 💥 Breach |
 | :--- | :--- |
-| [`CVE-2024-53252`](https://nvd.nist.gov/vuln/detail/CVE-2024-53252)<br>**N/A** ⚪ N/A · `2026-01-22`<br><sub>Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. The CVE was n...</sub> | [**CarMax**](https://www.google.com/search?q=CarMax%20data%20breach&tbm=nws) · `carmax.com`<br>**431,371** accounts · 2026-02-20<br><sub>`email addresses` · `names` · `phone numbers`</sub> |
-| [`CVE-2024-53251`](https://nvd.nist.gov/vuln/detail/CVE-2024-53251)<br>**N/A** ⚪ N/A · `2026-01-22`<br><sub>Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. The CVE was n...</sub> | [**Figure**](https://www.google.com/search?q=Figure%20data%20breach&tbm=nws) · `figure.com`<br>**967,178** accounts · 2026-02-18<br><sub>`dates of birth` · `email addresses` · `names`</sub> |
-| [`CVE-2024-53250`](https://nvd.nist.gov/vuln/detail/CVE-2024-53250)<br>**N/A** ⚪ N/A · `2026-01-22`<br><sub>Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. The CVE was n...</sub> | [**CanadaGoose**](https://www.google.com/search?q=CanadaGoose%20data%20breach&tbm=nws) · `canadagoose.com`<br>**581,877** accounts · 2026-02-17<br><sub>`device information` · `email addresses` · `ip addresses`</sub> |
+| [`CVE-2025-13710`](https://nvd.nist.gov/vuln/detail/CVE-2025-13710) · **7.8** 🟠 HIGH · `2025-12-23`<br><sub>Tencent HunyuanVideo load_vae Deserialization of Untrusted Data Remote Code Execut...</sub> | [**CarMax**](https://www.google.com/search?q=CarMax%20data%20breach&tbm=nws) · `carmax.com`<br>**431,371** accounts · `2026-02-20`<br><sub>`email addresses` · `names` · `phone numbers`</sub> |
+| [`CVE-2025-13709`](https://nvd.nist.gov/vuln/detail/CVE-2025-13709) · **7.8** 🟠 HIGH · `2025-12-23`<br><sub>Tencent TFace restore_checkpoint Deserialization of Untrusted Data Remote Code Exe...</sub> | [**Figure**](https://www.google.com/search?q=Figure%20data%20breach&tbm=nws) · `figure.com`<br>**967,178** accounts · `2026-02-18`<br><sub>`dates of birth` · `email addresses` · `names`</sub> |
+| [`CVE-2025-13708`](https://nvd.nist.gov/vuln/detail/CVE-2025-13708) · **7.8** 🟠 HIGH · `2025-12-23`<br><sub>Tencent NeuralNLP-NeuralClassifier _load_checkpoint Deserialization of Untrusted D...</sub> | [**CanadaGoose**](https://www.google.com/search?q=CanadaGoose%20data%20breach&tbm=nws) · `canadagoose.com`<br>**581,877** accounts · `2026-02-17`<br><sub>`device information` · `email addresses` · `ip addresses`</sub> |
 <!-- SECURITY-END -->
 ---
