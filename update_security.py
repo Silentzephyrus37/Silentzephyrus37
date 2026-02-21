@@ -34,25 +34,14 @@ def get_latest_cves(count=3):
         for item in vulns:
             if len(results) == count:
                 break
-
             cve    = item['cve']
             cve_id = cve['id']
-
-            desc = next(
-                (d['value'] for d in cve.get('descriptions', []) if d['lang'] == 'en'),
-                ''
+            desc   = next(
+                (d['value'] for d in cve.get('descriptions', []) if d['lang'] == 'en'), ''
             )
-
-            # Skip rejected / disputed / reserved entries
-            reject_keywords = ['** REJECT', '** DISPUTED', 'DO NOT USE', '** RESERVED', 'not yet assigned']
-            if any(kw in desc for kw in reject_keywords):
+            reject_kw = ['** REJECT', '** DISPUTED', 'DO NOT USE', '** RESERVED', 'not yet assigned']
+            if any(kw in desc for kw in reject_kw) or len(desc) < 30:
                 continue
-
-            # Skip if no real description
-            if len(desc) < 30:
-                continue
-
-            # Skip if no CVSS score
             score, severity = None, None
             for key in ['cvssMetricV31', 'cvssMetricV30', 'cvssMetricV2']:
                 m = cve.get('metrics', {}).get(key)
@@ -63,19 +52,14 @@ def get_latest_cves(count=3):
                         break
                     except (KeyError, IndexError):
                         continue
-
             if not score:
                 continue
-
-            if len(desc) > 85:
-                desc = desc[:82] + "..."
-
+            if len(desc) > 100: desc = desc[:97] + "..."
             published = cve.get('published', '')[:10]
             results.append((cve_id, desc, score, severity, published))
 
-        print(f"Got {len(results)} valid CVEs, latest: {results[0][4] if results else 'none'}")
+        print(f"Got {len(results)} CVEs")
         return results
-
     except Exception as e:
         print(f"CVE error: {e}")
         return [("N/A", "Could not fetch.", "N/A", "N/A", "N/A")] * count
@@ -83,10 +67,7 @@ def get_latest_cves(count=3):
 
 def get_latest_breaches(count=3):
     try:
-        r = requests.get(
-            "https://haveibeenpwned.com/api/v3/breaches",
-            headers=HEADERS, timeout=20
-        )
+        r = requests.get("https://haveibeenpwned.com/api/v3/breaches", headers=HEADERS, timeout=20)
         r.raise_for_status()
         breaches = sorted(r.json(), key=lambda x: x.get('AddedDate',''), reverse=True)
         results  = []
@@ -113,16 +94,26 @@ def update_readme():
     rows = []
     for (cve_id, desc, score, sev, published), (name, domain, count, added, classes) in zip(cves, breaches):
         sev_str  = severity_label(sev)
-        tags     = " · ".join(f"`{d.lower()}`" for d in classes) if classes else "`N/A`"
+        tags     = " &nbsp; ".join(f"`{d.lower()}`" for d in classes) if classes else "`N/A`"
         query    = urllib.parse.quote(f"{name} data breach")
         news_url = f"https://www.google.com/search?q={query}&tbm=nws"
 
-        col_cve    = f"[`{cve_id}`](https://nvd.nist.gov/vuln/detail/{cve_id}) · **{score}** {sev_str} · `{published}`<br><sub>{desc}</sub>"
-        col_breach = f"[**{name}**]({news_url}) · `{domain}`<br>**{int(count):,}** accounts · `{added}`<br><sub>{tags}</sub>"
+        col_cve = (
+            f"**[{cve_id}](https://nvd.nist.gov/vuln/detail/{cve_id})**"
+            f"&nbsp;&nbsp;`{score}` {sev_str}&nbsp;&nbsp;📅 `{published}`"
+            f"<br><sub>{desc}</sub>"
+        )
+        col_breach = (
+            f"**[{name}]({news_url})**&nbsp;&nbsp;`{domain}`"
+            f"<br>💥 `{int(count):,}` accounts&nbsp;&nbsp;📅 `{added}`"
+            f"<br><sub>{tags}</sub>"
+        )
         rows.append(f"| {col_cve} | {col_breach} |")
 
+    # Use HTML spacers to force equal 50/50 column widths
+    spacer = "&nbsp;" * 40
     table = (
-        "| ⚠️ CVE | 💥 Breach |\n"
+        f"| ⚠️ Latest CVE {spacer} | 💥 Latest Breach {spacer} |\n"
         "| :--- | :--- |\n"
         + "\n".join(rows)
     )
