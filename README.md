@@ -33,12 +33,10 @@ The most complete map of the LLM attack landscape I've come across. Good place t
 
 <!-- SECURITY-START -->
 ## Threat Intelligence Feed
-<sub>Automated · NVD + HaveIBeenPwned · Last updated: 2026-02-21 08:38 UTC</sub>
+<sub>Automated · NVD + HaveIBeenPwned · Last updated: 2026-02-22 08:39 UTC</sub>
 
 | VULNERABILITY &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | BREACH DISCLOSURE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | :--- | :--- |
-| [**`CVE-2025-13710`**](https://nvd.nist.gov/vuln/detail/CVE-2025-13710) ![HIGH](https://img.shields.io/badge/HIGH-FF6600?style=flat-square) **7.8**<br><sub>Tencent HunyuanVideo load_vae Deserialization of Untrusted Data Remote Code Execution Vulnera...</sub><br><sub>Published: `2025-12-23`</sub> | [**CarMax**](https://www.google.com/search?q=CarMax%20data%20breach&tbm=nws) &nbsp; <sub>`carmax.com`</sub><br><sub>**431,371** accounts compromised</sub><br><sub>Data: `email addresses` `names` `phone numbers` &nbsp;·&nbsp; Added: `2026-02-20`</sub> |
-| [**`CVE-2025-13709`**](https://nvd.nist.gov/vuln/detail/CVE-2025-13709) ![HIGH](https://img.shields.io/badge/HIGH-FF6600?style=flat-square) **7.8**<br><sub>Tencent TFace restore_checkpoint Deserialization of Untrusted Data Remote Code Execution Vuln...</sub><br><sub>Published: `2025-12-23`</sub> | [**Figure**](https://www.google.com/search?q=Figure%20data%20breach&tbm=nws) &nbsp; <sub>`figure.com`</sub><br><sub>**967,178** accounts compromised</sub><br><sub>Data: `dates of birth` `email addresses` `names` &nbsp;·&nbsp; Added: `2026-02-18`</sub> |
-| [**`CVE-2025-13708`**](https://nvd.nist.gov/vuln/detail/CVE-2025-13708) ![HIGH](https://img.shields.io/badge/HIGH-FF6600?style=flat-square) **7.8**<br><sub>Tencent NeuralNLP-NeuralClassifier _load_checkpoint Deserialization of Untrusted Data Remote ...</sub><br><sub>Published: `2025-12-23`</sub> | [**CanadaGoose**](https://www.google.com/search?q=CanadaGoose%20data%20breach&tbm=nws) &nbsp; <sub>`canadagoose.com`</sub><br><sub>**581,877** accounts compromised</sub><br><sub>Data: `device information` `email addresses` `ip addresses` &nbsp;·&nbsp; Added: `2026-02-17`</sub> |
+
 <!-- SECURITY-END -->
 ---
