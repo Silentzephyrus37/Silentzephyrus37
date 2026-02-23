@@ -5,7 +5,7 @@ Hi, I’m Samuel. I’m a Security Researcher driven by a simple question: Why d
 <br clear="right"/>
 
 ## 📰 Reading List
-
+ 
 Things I've read and kept thinking about. Updated when something actually sticks.
 
 **01 · [Indirect Prompt Injection Attacks Against LLM-Integrated Applications](https://arxiv.org/abs/2302.12173)**
