@@ -33,14 +33,18 @@ The most complete map of the LLM attack landscape I've come across. Good place t
 
 <!-- SECURITY-START -->
 ## Threat Intelligence Feed
-<sub>Automated · NVD + HaveIBeenPwned · Last updated: 2026-04-04 08:50 UTC</sub>
+<sub>Automated · NVD + HaveIBeenPwned · Last updated: 2026-04-05 08:53 UTC</sub>
 
 | VULNERABILITY &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | BREACH DISCLOSURE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | :--- | :--- |
-| [**`CVE-2025-57529`**](https://nvd.nist.gov/vuln/detail/CVE-2025-57529) ![CRITICAL](https://img.shields.io/badge/CRITICAL-FF0000?style=flat-square) **9.8**<br><sub>YouDataSum CPAS Audit Management System <=v4.9 is vulnerable to SQL Injection in /cpasList/fi...</sub><br><sub>Published: `2026-02-03`</sub> | [**Crunchyroll**](https://www.google.com/search?q=Crunchyroll%20data%20breach&tbm=nws) &nbsp; <sub>`https://www.crunchyroll.com/`</sub><br><sub>**1,195,684** accounts compromised</sub><br><sub>Data: `email addresses` &nbsp;·&nbsp; Added: `2026-04-04`</sub> |
-| [**`CVE-2025-52629`**](https://nvd.nist.gov/vuln/detail/CVE-2025-52629) ![LOW](https://img.shields.io/badge/LOW-339900?style=flat-square) **3.7**<br><sub>HCL AION is susceptible to Missing Content-Security-Policy. 
+| [**`CVE-2026-23088`**](https://nvd.nist.gov/vuln/detail/CVE-2026-23088) ![MEDIUM](https://img.shields.io/badge/MEDIUM-FFAA00?style=flat-square) **5.5**<br><sub>In the Linux kernel, the following vulnerability has been resolved:
 
-An The absence of a CSP header ...</sub><br><sub>Published: `2026-02-03`</sub> | [**SongTrivia2**](https://www.google.com/search?q=SongTrivia2%20data%20breach&tbm=nws) &nbsp; <sub>`songtrivia2.io`</sub><br><sub>**291,739** accounts compromised</sub><br><sub>Data: `auth tokens` `avatars` `email addresses` &nbsp;·&nbsp; Added: `2026-04-04`</sub> |
-| [**`CVE-2025-52627`**](https://nvd.nist.gov/vuln/detail/CVE-2025-52627) ![MEDIUM](https://img.shields.io/badge/MEDIUM-FFAA00?style=flat-square) **5.5**<br><sub>Root File System Not Mounted as Read-Only configuration vulnerability. This can allow uninten...</sub><br><sub>Published: `2026-02-03`</sub> | [**SUCCESS**](https://www.google.com/search?q=SUCCESS%20data%20breach&tbm=nws) &nbsp; <sub>`success.com`</sub><br><sub>**253,510** accounts compromised</sub><br><sub>Data: `device information` `email addresses` `ip addresses` &nbsp;·&nbsp; Added: `2026-04-01`</sub> |
+tracing: Fix crash on sy...</sub><br><sub>Published: `2026-02-04`</sub> | [**Crunchyroll**](https://www.google.com/search?q=Crunchyroll%20data%20breach&tbm=nws) &nbsp; <sub>`https://www.crunchyroll.com/`</sub><br><sub>**1,195,684** accounts compromised</sub><br><sub>Data: `email addresses` &nbsp;·&nbsp; Added: `2026-04-04`</sub> |
+| [**`CVE-2026-23087`**](https://nvd.nist.gov/vuln/detail/CVE-2026-23087) ![MEDIUM](https://img.shields.io/badge/MEDIUM-FFAA00?style=flat-square) **5.5**<br><sub>In the Linux kernel, the following vulnerability has been resolved:
+
+scsi: xen: scsiback: Fix...</sub><br><sub>Published: `2026-02-04`</sub> | [**SongTrivia2**](https://www.google.com/search?q=SongTrivia2%20data%20breach&tbm=nws) &nbsp; <sub>`songtrivia2.io`</sub><br><sub>**291,739** accounts compromised</sub><br><sub>Data: `auth tokens` `avatars` `email addresses` &nbsp;·&nbsp; Added: `2026-04-04`</sub> |
+| [**`CVE-2026-23086`**](https://nvd.nist.gov/vuln/detail/CVE-2026-23086) ![MEDIUM](https://img.shields.io/badge/MEDIUM-FFAA00?style=flat-square) **5.5**<br><sub>In the Linux kernel, the following vulnerability has been resolved:
+
+vsock/virtio: cap TX cre...</sub><br><sub>Published: `2026-02-04`</sub> | [**SUCCESS**](https://www.google.com/search?q=SUCCESS%20data%20breach&tbm=nws) &nbsp; <sub>`success.com`</sub><br><sub>**253,510** accounts compromised</sub><br><sub>Data: `device information` `email addresses` `ip addresses` &nbsp;·&nbsp; Added: `2026-04-01`</sub> |
 <!-- SECURITY-END -->
 ---
