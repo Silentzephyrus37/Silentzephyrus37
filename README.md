@@ -33,18 +33,12 @@ The most complete map of the LLM attack landscape I've come across. Good place t
 
 <!-- SECURITY-START -->
 ## Threat Intelligence Feed
-<sub>Automated · NVD + HaveIBeenPwned · Last updated: 2026-04-15 09:26 UTC</sub>
+<sub>Automated · NVD + HaveIBeenPwned · Last updated: 2026-04-16 09:25 UTC</sub>
 
 | VULNERABILITY &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | BREACH DISCLOSURE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | :--- | :--- |
-| [**`CVE-2026-23200`**](https://nvd.nist.gov/vuln/detail/CVE-2026-23200) ![MEDIUM](https://img.shields.io/badge/MEDIUM-FFAA00?style=flat-square) **5.5**<br><sub>In the Linux kernel, the following vulnerability has been resolved:
-
-ipv6: Fix ECMP sibling c...</sub><br><sub>Published: `2026-02-14`</sub> | [**Hallmark**](https://www.google.com/search?q=Hallmark%20data%20breach&tbm=nws) &nbsp; <sub>`hallmark.com`</sub><br><sub>**1,736,520** accounts compromised</sub><br><sub>Data: `email addresses` `names` `phone numbers` &nbsp;·&nbsp; Added: `2026-04-12`</sub> |
-| [**`CVE-2026-23199`**](https://nvd.nist.gov/vuln/detail/CVE-2026-23199) ![MEDIUM](https://img.shields.io/badge/MEDIUM-FFAA00?style=flat-square) **5.5**<br><sub>In the Linux kernel, the following vulnerability has been resolved:
-
-procfs: avoid fetching b...</sub><br><sub>Published: `2026-02-14`</sub> | [**MyLovelyAI**](https://www.google.com/search?q=MyLovelyAI%20data%20breach&tbm=nws) &nbsp; <sub>`mylovely.ai`</sub><br><sub>**106,271** accounts compromised</sub><br><sub>Data: `email addresses` `social media profiles` &nbsp;·&nbsp; Added: `2026-04-08`</sub> |
-| [**`CVE-2026-23198`**](https://nvd.nist.gov/vuln/detail/CVE-2026-23198) ![HIGH](https://img.shields.io/badge/HIGH-FF6600?style=flat-square) **7.8**<br><sub>In the Linux kernel, the following vulnerability has been resolved:
-
-KVM: Don't clobber irqfd...</sub><br><sub>Published: `2026-02-14`</sub> | [**Crunchyroll**](https://www.google.com/search?q=Crunchyroll%20data%20breach&tbm=nws) &nbsp; <sub>`https://www.crunchyroll.com/`</sub><br><sub>**1,195,684** accounts compromised</sub><br><sub>Data: `email addresses` &nbsp;·&nbsp; Added: `2026-04-04`</sub> |
+| [**`CVE-2019-25384`**](https://nvd.nist.gov/vuln/detail/CVE-2019-25384) ![MEDIUM](https://img.shields.io/badge/MEDIUM-FFAA00?style=flat-square) **6.1**<br><sub>Smoothwall Express 3.1-SP4-polar-x86_64-update9 contains multiple reflected cross-site script...</sub><br><sub>Published: `2026-02-16`</sub> | [**McGrawHill**](https://www.google.com/search?q=McGrawHill%20data%20breach&tbm=nws) &nbsp; <sub>`mheducation.com`</sub><br><sub>**13,500,136** accounts compromised</sub><br><sub>Data: `email addresses` `names` `phone numbers` &nbsp;·&nbsp; Added: `2026-04-16`</sub> |
+| [**`CVE-2019-25383`**](https://nvd.nist.gov/vuln/detail/CVE-2019-25383) ![MEDIUM](https://img.shields.io/badge/MEDIUM-FFAA00?style=flat-square) **6.1**<br><sub>Smoothwall Express 3.1-SP4-polar-x86_64-update9 contains multiple reflected cross-site script...</sub><br><sub>Published: `2026-02-16`</sub> | [**Hallmark**](https://www.google.com/search?q=Hallmark%20data%20breach&tbm=nws) &nbsp; <sub>`hallmark.com`</sub><br><sub>**1,736,520** accounts compromised</sub><br><sub>Data: `email addresses` `names` `phone numbers` &nbsp;·&nbsp; Added: `2026-04-12`</sub> |
+| [**`CVE-2019-25382`**](https://nvd.nist.gov/vuln/detail/CVE-2019-25382) ![MEDIUM](https://img.shields.io/badge/MEDIUM-FFAA00?style=flat-square) **6.1**<br><sub>Smoothwall Express 3.1-SP4-polar-x86_64-update9 contains a reflected cross-site scripting vul...</sub><br><sub>Published: `2026-02-16`</sub> | [**MyLovelyAI**](https://www.google.com/search?q=MyLovelyAI%20data%20breach&tbm=nws) &nbsp; <sub>`mylovely.ai`</sub><br><sub>**106,271** accounts compromised</sub><br><sub>Data: `email addresses` `social media profiles` &nbsp;·&nbsp; Added: `2026-04-08`</sub> |
 <!-- SECURITY-END -->
 ---
