@@ -33,7 +33,7 @@ The most complete map of the LLM attack landscape I've come across. Good place t
 
 <!-- SECURITY-START -->
 ## Threat Intelligence Feed
-<sub>Automated · NVD + HaveIBeenPwned · Last updated: 2026-05-14 10:25 UTC</sub>
+<sub>Automated · NVD + HaveIBeenPwned · Last updated: 2026-05-15 10:31 UTC</sub>
 
 | VULNERABILITY &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | BREACH DISCLOSURE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | :--- | :--- |
